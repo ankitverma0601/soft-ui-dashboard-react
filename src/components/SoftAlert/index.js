@@ -1,3 +1,4 @@
+import SoftButton from "../SoftButton";
 /**
 =========================================================
 * Soft UI Dashboard React - v4.0.1
@@ -36,7 +37,7 @@ function SoftAlert({ color, dismissible, children, ...rest }) {
   // The base template for the alert
   const alertTemplate = (mount = true) => (
     <Fade in={mount} timeout={300}>
-      <SoftAlertRoot ownerState={{ color }} {...rest}>
+      <SoftButton color="color">
         <SoftBox display="flex" alignItems="center" color="white">
           {children}
         </SoftBox>
@@ -45,7 +46,7 @@ function SoftAlert({ color, dismissible, children, ...rest }) {
             &times;
           </SoftAlertCloseIcon>
         ) : null}
-      </SoftAlertRoot>
+      </SoftButton>
     </Fade>
   );
 
