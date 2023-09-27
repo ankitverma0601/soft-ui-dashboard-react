@@ -22,7 +22,6 @@ import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
 import SoftBox from "components/SoftBox";
-import SoftTypography from "components/SoftTypography";
 
 // Images
 import curved14 from "assets/images/curved-images/curved14.jpg";
@@ -43,7 +42,7 @@ function MasterCard({ color, number, holder, expires }) {
   const num4 = numbers.slice(12, 16).join("");
 
   return (
-    <Card
+    (<Card
       sx={({
         palette: { gradients },
         functions: { linearGradient, rgba },
@@ -65,9 +64,9 @@ function MasterCard({ color, number, holder, expires }) {
         <SoftBox color="white" p={1} lineHeight={0} display="inline-block">
           <Icon fontSize="default">wifi</Icon>
         </SoftBox>
-        <SoftTypography variant="h5" color="white" fontWeight="medium" sx={{ mt: 3, mb: 5, pb: 1 }}>
+        <SoftBox variant="contained" color="white" opacity="0.8">
           {num1}&nbsp;&nbsp;&nbsp;{num2}&nbsp;&nbsp;&nbsp;{num3}&nbsp;&nbsp;&nbsp;{num4}
-        </SoftTypography>
+        </SoftBox>
         <SoftBox display="flex" justifyContent="space-between" alignItems="center">
           <SoftBox display="flex" alignItems="center">
             <SoftBox mr={3} lineHeight={1}>
@@ -97,7 +96,7 @@ function MasterCard({ color, number, holder, expires }) {
           </SoftBox>
         </SoftBox>
       </SoftBox>
-    </Card>
+    </Card>)
   );
 }
 
