@@ -52,7 +52,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
   ));
 
   return (
-    <Card
+    (<Card
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -116,15 +116,16 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
         </SoftBox>
         <SoftBox display="flex" justifyContent="space-between" alignItems="center">
           {action.type === "internal" ? (
-            <SoftButton
-              component={Link}
-              to={action.route}
+            <SoftBox
+              component="a"
+              href={action.route}
+              target="_blank"
+              rel="noreferrer"
               variant="outlined"
-              size="small"
               color={action.color}
-            >
+              data-changed="true">
               {action.label}
-            </SoftButton>
+            </SoftBox>
           ) : (
             <SoftButton
               component="a"
@@ -141,7 +142,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
           <SoftBox display="flex">{renderAuthors}</SoftBox>
         </SoftBox>
       </SoftBox>
-    </Card>
+    </Card>)
   );
 }
 
