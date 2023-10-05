@@ -12,19 +12,19 @@ import team4 from "assets/images/team-4.jpg";
 
 function Author({ image, name, email }) {
   return (
-    <SoftBox display="flex" alignItems="center" px={1} py={0.5}>
+    (<SoftBox display="flex" alignItems="center" px={1} py={0.5}>
       <SoftBox mr={2}>
         <SoftAvatar src={image} alt={name} size="sm" variant="rounded" />
       </SoftBox>
       <SoftBox display="flex" flexDirection="column">
-        <SoftTypography variant="button" fontWeight="medium">
+        <SoftBox variant="contained" color="secondary" >
           {name}
-        </SoftTypography>
-        <SoftTypography variant="caption" color="secondary">
+        </SoftBox>
+        <SoftBox variant="contained" color="secondary" >
           {email}
-        </SoftTypography>
+        </SoftBox>
       </SoftBox>
-    </SoftBox>
+    </SoftBox>)
   );
 }
 

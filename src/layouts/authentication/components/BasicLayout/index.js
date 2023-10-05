@@ -32,7 +32,7 @@ import Footer from "layouts/authentication/components/Footer";
 
 function BasicLayout({ title, description, image, children }) {
   return (
-    <PageLayout>
+    (<PageLayout>
       <DefaultNavbar
         action={{
           type: "external",
@@ -65,9 +65,9 @@ function BasicLayout({ title, description, image, children }) {
         <Grid container spacing={3} justifyContent="center" sx={{ textAlign: "center" }}>
           <Grid item xs={10} lg={4}>
             <SoftBox mt={6} mb={1}>
-              <SoftTypography variant="h1" color="white" fontWeight="bold">
+              <SoftBox variant="contained" color="white" >
                 {title}
-              </SoftTypography>
+              </SoftBox>
             </SoftBox>
             <SoftBox mb={2}>
               <SoftTypography variant="body2" color="white" fontWeight="regular">
@@ -85,7 +85,7 @@ function BasicLayout({ title, description, image, children }) {
         </Grid>
       </SoftBox>
       <Footer />
-    </PageLayout>
+    </PageLayout>)
   );
 }
 

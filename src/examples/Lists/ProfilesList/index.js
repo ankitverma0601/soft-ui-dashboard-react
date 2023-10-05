@@ -40,9 +40,9 @@ function ProfilesList({ title, profiles }) {
         alignItems="flex-start"
         justifyContent="center"
       >
-        <SoftTypography variant="button" fontWeight="medium">
+        <SoftBox variant="contained" color="text" >
           {name}
-        </SoftTypography>
+        </SoftBox>
         <SoftTypography variant="caption" color="text">
           {description}
         </SoftTypography>

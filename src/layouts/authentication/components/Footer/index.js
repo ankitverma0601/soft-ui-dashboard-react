@@ -29,14 +29,14 @@ import SoftTypography from "components/SoftTypography";
 
 function Footer() {
   return (
-    <SoftBox component="footer" py={6}>
+    (<SoftBox component="footer" py={6}>
       <Grid container justifyContent="center">
         <Grid item xs={10} lg={8}>
           <SoftBox display="flex" justifyContent="center" flexWrap="wrap" mb={3}>
             <SoftBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SoftTypography component="a" href="#" variant="body2" color="secondary">
+              <SoftBox variant="contained" color="secondary" >
                 Company
-              </SoftTypography>
+              </SoftBox>
             </SoftBox>
             <SoftBox mr={{ xs: 2, lg: 3, xl: 6 }}>
               <SoftTypography component="a" href="#" variant="body2" color="secondary">
@@ -90,7 +90,7 @@ function Footer() {
           </SoftTypography>
         </Grid>
       </Grid>
-    </SoftBox>
+    </SoftBox>)
   );
 }
 

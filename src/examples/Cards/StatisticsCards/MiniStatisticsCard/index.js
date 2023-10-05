@@ -27,7 +27,7 @@ import SoftTypography from "components/SoftTypography";
 
 function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction }) {
   return (
-    <Card>
+    (<Card>
       <SoftBox bgColor={bgColor} variant="gradient">
         <SoftBox p={2}>
           <Grid container alignItems="center">
@@ -53,25 +53,29 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
             ) : null}
             <Grid item xs={8}>
               <SoftBox ml={direction === "left" ? 2 : 0} lineHeight={1}>
-                <SoftTypography
-                  variant="button"
-                  color={bgColor === "white" ? "text" : "white"}
-                  opacity={bgColor === "white" ? 1 : 0.7}
-                  textTransform="capitalize"
-                  fontWeight={title.fontWeight}
-                >
+                <SoftBox
+                  variant="contained"
+                  color={bgColor === 'white' ? 'dark' : 'white'}
+                  bgColor="transparent"
+                  opacity="1"
+                  borderRadius="none"
+                  shadow="none"
+                  >
                   {title.text}
-                </SoftTypography>
-                <SoftTypography
-                  variant="h5"
-                  fontWeight="bold"
-                  color={bgColor === "white" ? "dark" : "white"}
-                >
+                </SoftBox>
+                <SoftBox
+                  variant="button"
+                  bgColor={bgColor === 'white' ? 'text' : 'white'}
+                  color={bgColor === 'white' ? 'text' : 'white'}
+                  opacity={bgColor === 'white' ? 1 : 0.7}
+                  borderRadius="none"
+                  shadow="none"
+                  >
                   {count}{" "}
                   <SoftTypography variant="button" color={percentage.color} fontWeight="bold">
                     {percentage.text}
                   </SoftTypography>
-                </SoftTypography>
+                </SoftBox>
               </SoftBox>
             </Grid>
             {direction === "right" ? (
@@ -98,7 +102,7 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
           </Grid>
         </SoftBox>
       </SoftBox>
-    </Card>
+    </Card>)
   );
 }
 

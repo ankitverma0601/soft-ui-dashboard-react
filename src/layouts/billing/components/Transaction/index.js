@@ -26,7 +26,7 @@ import SoftButton from "components/SoftButton";
 
 function Transaction({ color, icon, name, description, value }) {
   return (
-    <SoftBox key={name} component="li" py={1} pr={2} mb={1}>
+    (<SoftBox key={name} component="li" py={1} pr={2} mb={1}>
       <SoftBox display="flex" justifyContent="space-between" alignItems="center">
         <SoftBox display="flex" alignItems="center">
           <SoftBox mr={2}>
@@ -35,9 +35,9 @@ function Transaction({ color, icon, name, description, value }) {
             </SoftButton>
           </SoftBox>
           <SoftBox display="flex" flexDirection="column">
-            <SoftTypography variant="button" fontWeight="medium" gutterBottom>
+            <SoftBox variant="contained" color="text" >
               {name}
-            </SoftTypography>
+            </SoftBox>
             <SoftTypography variant="caption" color="text">
               {description}
             </SoftTypography>
@@ -47,7 +47,7 @@ function Transaction({ color, icon, name, description, value }) {
           {value}
         </SoftTypography>
       </SoftBox>
-    </SoftBox>
+    </SoftBox>)
   );
 }
 

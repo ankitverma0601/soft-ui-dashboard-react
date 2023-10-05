@@ -26,7 +26,7 @@ import ivancik from "assets/images/ivancik.jpg";
 
 function WorkWithTheRockets() {
   return (
-    <Card sx={{ height: "100%" }}>
+    (<Card sx={{ height: "100%" }}>
       <SoftBox position="relative" height="100%" p={2}>
         <SoftBox
           display="flex"
@@ -45,9 +45,9 @@ function WorkWithTheRockets() {
           }}
         >
           <SoftBox mb={3} pt={1}>
-            <SoftTypography variant="h5" color="white" fontWeight="bold">
+            <SoftBox color="white" >
               العمل مع الصواريخ
-            </SoftTypography>
+            </SoftBox>
           </SoftBox>
           <SoftBox mb={2}>
             <SoftTypography variant="body2" color="white" fontWeight="bold">
@@ -84,7 +84,7 @@ function WorkWithTheRockets() {
           </SoftTypography>
         </SoftBox>
       </SoftBox>
-    </Card>
+    </Card>)
   );
 }
 

@@ -70,7 +70,7 @@ function DefaultNavbar({ transparent, light, action }) {
   }, []);
 
   return (
-    <Container>
+    (<Container>
       <SoftBox
         py={1.5}
         px={{ xs: transparent ? 4 : 5, sm: transparent ? 2 : 5, lg: transparent ? 0 : 5 }}
@@ -92,9 +92,9 @@ function DefaultNavbar({ transparent, light, action }) {
         })}
       >
         <SoftBox component={Link} to="/" py={transparent ? 1.5 : 0.75} lineHeight={1}>
-          <SoftTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
+          <SoftBox color={light ? 'white' : 'dark'} variant="contained" >
             Soft UI Dashboard
-          </SoftTypography>
+          </SoftBox>
         </SoftBox>
         <SoftBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
           <DefaultNavbarLink icon="donut_large" name="dashboard" route="/dashboard" light={light} />
@@ -155,7 +155,7 @@ function DefaultNavbar({ transparent, light, action }) {
         </SoftBox>
       </SoftBox>
       {mobileView && <DefaultNavbarMobile open={mobileNavbar} close={closeMobileNavbar} />}
-    </Container>
+    </Container>)
   );
 }
 
