@@ -24,17 +24,17 @@ import SoftTypography from "components/SoftTypography";
 
 function TodoCard() {
   return (
-    <Card>
+    (<Card>
       <SoftBox bgColor="dark" variant="gradient">
         <SoftBox p={3}>
           <SoftBox display="flex" justifyContent="space-between">
-            <SoftTypography variant="h5" color="white">
+            <SoftBox variant="contained" color="white" >
               To Do
-            </SoftTypography>
+            </SoftBox>
             <SoftBox textAlign="center" lineHeight={1}>
-              <SoftTypography variant="h1" color="white" fontWeight="bold">
+              <SoftBox variant="contained" color="white" >
                 7
-              </SoftTypography>
+              </SoftBox>
               <SoftTypography variant="button" color="white" fontWeight="regular">
                 items
               </SoftTypography>
@@ -55,7 +55,7 @@ function TodoCard() {
           </SoftBox>
         </Tooltip>
       </SoftBox>
-    </Card>
+    </Card>)
   );
 }
 

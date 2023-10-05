@@ -26,7 +26,7 @@ import SoftTypography from "components/SoftTypography";
 
 function PlaceholderCard({ icon, title, hasBorder, outlined }) {
   return (
-    <Card
+    (<Card
       raised
       sx={({ borders: { borderWidth, borderColor } }) => ({
         height: "100%",
@@ -48,11 +48,11 @@ function PlaceholderCard({ icon, title, hasBorder, outlined }) {
             {icon}
           </Icon>
         </SoftBox>
-        <SoftTypography variant={title.variant} color="secondary">
+        <SoftBox variant={title.variant} color="secondary" >
           {title.text}
-        </SoftTypography>
+        </SoftBox>
       </SoftBox>
-    </Card>
+    </Card>)
   );
 }
 

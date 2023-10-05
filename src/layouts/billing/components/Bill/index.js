@@ -26,17 +26,17 @@ import SoftButton from "components/SoftButton";
 
 function Bill({ name, company, email, vat, noGutter }) {
   return (
-    <SoftBox
-      component="li"
-      display="flex"
-      justifyContent="space-between"
-      alignItems="flex-start"
-      bgColor="grey-100"
-      borderRadius="lg"
-      p={3}
-      mb={noGutter ? 0 : 1}
-      mt={2}
-    >
+    (<SoftBox
+          component="li"
+          display="flex"
+          justifyContent="space-between"
+          alignItems="flex-start"
+          bgColor="grey-100"
+          borderRadius="lg"
+          p={3}
+          mb={noGutter ? 0 : 1}
+          mt={2}
+        >
       <SoftBox width="100%" display="flex" flexDirection="column">
         <SoftBox
           display="flex"
@@ -45,9 +45,9 @@ function Bill({ name, company, email, vat, noGutter }) {
           flexDirection={{ xs: "column", sm: "row" }}
           mb={2}
         >
-          <SoftTypography variant="button" fontWeight="medium" textTransform="capitalize">
+          <SoftBox variant="contained" color="text" >
             {name}
-          </SoftTypography>
+          </SoftBox>
 
           <SoftBox
             display="flex"
@@ -66,12 +66,12 @@ function Bill({ name, company, email, vat, noGutter }) {
           </SoftBox>
         </SoftBox>
         <SoftBox mb={1} lineHeight={0}>
-          <SoftTypography variant="caption" color="text">
+          <SoftBox variant="contained" color="text" >
             Company Name:&nbsp;&nbsp;&nbsp;
-            <SoftTypography variant="caption" fontWeight="medium" textTransform="capitalize">
+            <SoftBox variant="contained" color="text" >
               {company}
-            </SoftTypography>
-          </SoftTypography>
+            </SoftBox>
+          </SoftBox>
         </SoftBox>
         <SoftBox mb={1} lineHeight={0}>
           <SoftTypography variant="caption" color="text">
@@ -88,7 +88,7 @@ function Bill({ name, company, email, vat, noGutter }) {
           </SoftTypography>
         </SoftTypography>
       </SoftBox>
-    </SoftBox>
+    </SoftBox>)
   );
 }
 

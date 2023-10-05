@@ -26,7 +26,7 @@ import ivancik from "assets/images/ivancik.jpg";
 
 function WorkWithTheRockets() {
   return (
-    <Card sx={{ height: "100%" }}>
+    (<Card sx={{ height: "100%" }}>
       <SoftBox position="relative" height="100%" p={2}>
         <SoftBox
           display="flex"
@@ -45,15 +45,15 @@ function WorkWithTheRockets() {
           }}
         >
           <SoftBox mb={3} pt={1}>
-            <SoftTypography variant="h5" color="white" fontWeight="bold">
+            <SoftBox variant="contained" color="white" >
               Work with the rockets
-            </SoftTypography>
+            </SoftBox>
           </SoftBox>
           <SoftBox mb={2}>
-            <SoftTypography variant="body2" color="white">
+            <SoftBox variant="contained" color="white" >
               Wealth creation is an evolutionarily recent positive-sum game. It is all about who
               take the opportunity first.
-            </SoftTypography>
+            </SoftBox>
           </SoftBox>
           <SoftTypography
             component="a"
@@ -84,7 +84,7 @@ function WorkWithTheRockets() {
           </SoftTypography>
         </SoftBox>
       </SoftBox>
-    </Card>
+    </Card>)
   );
 }
 

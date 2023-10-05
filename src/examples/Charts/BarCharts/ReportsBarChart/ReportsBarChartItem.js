@@ -31,7 +31,7 @@ function ReportsBarChartItem({ color, icon, label, progress }) {
   const { size } = typography;
 
   return (
-    <SoftBox width="100%">
+    (<SoftBox width="100%">
       <SoftBox display="flex" alignItems="center" mb={2}>
         <SoftBox
           bgColor={icon.color}
@@ -49,14 +49,16 @@ function ReportsBarChartItem({ color, icon, label, progress }) {
         >
           <Icon>{icon.component}</Icon>
         </SoftBox>
-        <SoftTypography
-          variant="caption"
-          textTransform="capitalize"
-          fontWeight="medium"
-          color="text"
-        >
+        <SoftBox
+          variant="contained"
+          color={color}
+          bgColor="transparent"
+          opacity="1"
+          borderRadius="none"
+          shadow="none"
+          >
           {label}
-        </SoftTypography>
+        </SoftBox>
       </SoftBox>
       <SoftBox mt={1}>
         <SoftTypography variant="h4" fontWeight="bold" color={color}>
@@ -66,7 +68,7 @@ function ReportsBarChartItem({ color, icon, label, progress }) {
           <SoftProgress value={progress.percentage} color={color} />
         </SoftBox>
       </SoftBox>
-    </SoftBox>
+    </SoftBox>)
   );
 }
 

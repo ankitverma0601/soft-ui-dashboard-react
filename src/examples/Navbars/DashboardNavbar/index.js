@@ -136,7 +136,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
   );
 
   return (
-    <AppBar
+    (<AppBar
       position={absolute ? "absolute" : navbarType}
       color="inherit"
       sx={(theme) => navbar(theme, { transparentNavbar, absolute, light })}
@@ -163,13 +163,13 @@ function DashboardNavbar({ absolute, light, isMini }) {
                   >
                     account_circle
                   </Icon>
-                  <SoftTypography
-                    variant="button"
-                    fontWeight="medium"
-                    color={light ? "white" : "dark"}
+                  <SoftBox
+                    variant="contained"
+                    color={light ? 'white' : 'dark'}
+                    
                   >
                     Sign in
-                  </SoftTypography>
+                  </SoftBox>
                 </IconButton>
               </Link>
               <IconButton
@@ -206,7 +206,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
           </SoftBox>
         )}
       </Toolbar>
-    </AppBar>
+    </AppBar>)
   );
 }
 

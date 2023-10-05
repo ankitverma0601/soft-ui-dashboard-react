@@ -43,18 +43,17 @@ const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref
       {image}
     </SoftBox>
     <SoftBox>
-      <SoftTypography variant="button" textTransform="capitalize" fontWeight="regular">
+      <SoftBox variant="button" color="secondary" >
         <strong>{title[0]}</strong> {title[1]}
-      </SoftTypography>
-      <SoftTypography
-        variant="caption"
+      </SoftBox>
+      <SoftBox
+        variant="contained"
         color="secondary"
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          mt: 0.5,
-        }}
-      >
+        bgColor="transparent"
+        opacity="1"
+        borderRadius="none"
+        shadow="none"
+        >
         <SoftTypography variant="button" color="secondary">
           <Icon
             sx={{
@@ -66,7 +65,7 @@ const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref
           </Icon>
         </SoftTypography>
         {date}
-      </SoftTypography>
+      </SoftBox>
     </SoftBox>
   </MenuItem>
 ));
